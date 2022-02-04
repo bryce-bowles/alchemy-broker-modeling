@@ -5,8 +5,8 @@ Performed segmentation analysis and predictive modeling on insurance broker perf
 
 # Alchemy Broker Executive Summary
 Alchemy Insurance sought insight into evaluating and predicting broker performance based on historical data. Specifically, the team was tasked with segmentation analysis and predicting whether gross written premium will increase or decrease in the next year.
-•	Steps were taken to explore, visualize and describe five groups of brokers using principal component analysis
-•	Four predictive models were built, evaluated, and then tuned for prescriptive measures to analyze broker performance 
+*	Steps were taken to explore, visualize and describe five groups of brokers using principal component analysis
+*	Four predictive models were built, evaluated, and then tuned for prescriptive measures to analyze broker performance 
 
 ### Results: 
 The top performing cluster was cluster 2. This cluster had higher gross written premiums for the past two years. A random forest model with a high AUC of 0.7321 was used to predict whether the 2020 Gross Written Premium will increase or decrease from 2019 with a misclassification rate of 35%. Important variables for prediction included gross written premium of the past two years and a total of the policy counts of the past three years. The csv file included with this report titled “rf_predictions.csv” contains the probability that the gross written premium will go up in 2020 for each broker id.
@@ -28,6 +28,8 @@ K-means clustering was then used to create 5 clusters. To visually evaluate the 
 
 A summary of the principle component scores was used to calculate a cumulative proportion and bar chart to show that the first two scores explain 77% of the variation in the original dataset.
  
+<img width="426" alt="image" src="https://user-images.githubusercontent.com/65502025/152540974-c332c246-26ed-4621-af41-86e068da63f4.png">
+
  
 Cluster 1, Black Circles: This cluster has positive values for PC2 and is centered around 0 for PC1. This indicates these brokers are likely to have high quote ratios in 2018 and 2019.
 
@@ -64,10 +66,16 @@ Support Vector Machine: 0.7341
 Classification Tree:  ![image](https://user-images.githubusercontent.com/65502025/151862453-9779c6b9-59c3-49a4-a2d3-7308ed5e2aad.png)
 
 Gross Written Premium 2018-2019 and total policy count of 2017-2019 are important variables for prediction.
+
 Logistic Regression:
+
+<img width="556" alt="image" src="https://user-images.githubusercontent.com/65502025/152541239-9e1a80a3-5ab0-4dc2-a571-60df6106a7a0.png">
   
 Total policy count of 2017-2019 and Quote ratio 2017 are important variables for prediction. 
+
 Random Forests:
+
+<img width="646" alt="image" src="https://user-images.githubusercontent.com/65502025/152541341-7fae8f57-7095-41fd-8fd0-1683da272ed8.png">
  
 Total policy count of 2017-2019, gross written premium for 2018 and 2019 and quote ratio for 2017 are important variables for the random forests model. 
 Support Vector Machine: There is no easy way to assess the importance of predictors in SVM models.
